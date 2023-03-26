@@ -1,0 +1,112 @@
+.imagem-carrosel-um{
+    object-fit: cover;
+   
+
+    height: 400px;
+}
+.imagem-carrosel-dois{
+    object-fit: cover;
+    
+   
+    /* object-position: 0  80%; */
+    height: 400px;
+}
+
+.cor-navbar{
+  background-color: #202024;
+  
+}
+
+.cor-bg{
+  background-color: #121214;
+}
+
+.font-titulo{
+  font-family: 'Anton', sans-serif;
+}
+
+.cor-especial{
+    color:#04d361;
+}
+.cor-texto{
+    color: black;
+}
+.botao-cor-especial{
+    
+    background-color:#8257e5;
+    color: white;
+   
+    
+}
+
+.cor-card{
+  background-color: #202024;
+}
+
+.borda-cor-especial{
+    border-color:#8257e5;
+  
+}
+
+
+.card-posicao-imagem{
+    object-fit: cover;
+
+    height: 200px;
+}
+.card-posicao-imagem-sp{
+  object-fit: fill;
+
+  height: 200px;
+}
+.card-largura{
+    max-width: 18rem;
+}
+
+
+
+
+
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #fff;
+    color: black;
+    z-index: 2;
+  }
+
+  .flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+
+

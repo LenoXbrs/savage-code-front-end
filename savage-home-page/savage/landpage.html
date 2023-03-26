@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savage Code</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body class="cor-bg bg-gradient-warning">
+<header>
+
+  <nav class="navbar navbar-expand-lg cor-navbar fixed-top">
+    <a class="navbar-brand font-titulo " style="color:  #04d361;" href="#">Savage Code</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+      <ul class="navbar-nav ">
+      <li>  <a class="nav-item nav-link active text-light  " href="#">Início <span class="sr-only">(current)</span></a></li>
+      <li>  <a class="nav-item nav-link text-light" href="#">Login</a></li>
+      <li>  <a class="nav-item nav-link text-light" href="#">Entrar</a></li>
+      <li>  <a class="nav-item nav-link text-light" data-toggle="modal" data-target="#modal-contato" href="#">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+<main>
+  <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 imagem-carrosel-um" src="src/img/bgcarro.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block h-50">
+        
+          <h1 class="font-titulo display-4">Codifique melhor!</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 imagem-carrosel-dois" src="src/img/bg2.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block h-50">
+          <h1 class="font-titulo display-4">Economize e ganhe em produtividade!</h1>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </section>
+
+  <section id="titulo">
+    <h1 class="text-center font-titulo cor-especial pt-5">Desperte o seu lado selvagem da programação e registre-se agora no curso Savage Code!</h2>
+    <p class="text-center text-secondary font-titulo pb-5">Saia da inércia e venha preparar seu futuro com a Savage</p>
+  </section>
+
+  <section class="container" id="receitas">
+    <div class="row justify-content-center">
+      <article class="card borda-cor-especial  card-largura p-0  m-4 col-12 col-md-4">
+        <img class="card-posicao-imagem-sp "  src="src/img/springBoot.png" alt="tigela com salada de abacate, vista superior">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">Spring Framework</h5>
+          <p class="card-text">Aprenda a desenvolver aplicações web dinâmicas com um dos frameworks mais populares do mercado, o Java Spring.</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+
+
+      <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4" >
+        <img class="card-posicao-imagem"  src="src/img/restApi.jpg" alt="tigela com salada de vegetais estilo oriental, vista de cima">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">RESTful APIs</h5>
+          <p class="card-text">Desenvolva aplicações web avançadas usando o conceito de RESTful APIs para criar serviços web escaláveis, seguros e flexíveis, integrando-os com o Java Spring.</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+
+    
+
+
+      <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
+        <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">JPA</h5>
+          <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+
+
+    
+      <article class="card borda-cor-especial card-largura p-0  m-4 col-12 col-md-4 " >
+        <img class="card-posicao-imagem" src="src/img/react.png" alt="tigela de mingau com kiwi, vista superior">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">React</h5>
+          <p class="card-text">Crie interfaces de usuário modernas e interativas para suas aplicações web usando a biblioteca JavaScript React.</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+
+      <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4" >
+        <img class="card-posicao-imagem"  src="src/img/css.jpg" alt="prato com mix de vegetais e mão de pessoa adicionando azeite, vista superior">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">CSS</h5>
+          <p class="card-text">Estilize e faça a formatação visual de suas páginas web com a linguagem de estilo CSS!</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+<!-- 
+      <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
+        <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="card-posicao-imagem" src="src/img/receita-mix.jpg" alt="prato com mix de vegetais e mão de pessoa adicionando azeite, vista superior">
+            <div class="card-body">
+              <h5 class="card-title">Mix de vegetais</h5>
+              <p class="card-text">Receita refrescante e cheia de vitaminas para o seu café da manhã!</p>
+              <button href="#" class="btn botao-cor-especial" onclick="flip()">Veja a receita</button>
+
+
+            </div>
+          </div>
+          <div class="flip-card-back">
+           
+            <h5>Receita de Mix de Vegetais</h5>
+            <p>Ingredientes:</p>
+            <ul>
+              <li>1 xícara de brócolis</li>
+              <li>1 xícara de couve-flor</li>
+              <li>1 xícara de cenoura ralada</li>
+              <li>1 xícara de azeite</li>
+            </ul>
+              <button href="#" class="btn botao-cor-especial align-bottom " onclick="flip()">Veja a receita</button>
+              </div>
+              </div>
+            </div>
+              </article>
+            -->
+            
+      
+
+      <article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4" >
+        <img class="card-posicao-imagem" src="src/img/javascript.png" alt="prato de salada de pimentões com alguns ingredientes ao lado, vista superior">
+        <div class="card-body cor-card text-light">
+          <h5 class="card-title">JavaScript</h5>
+          <p class="card-text">Adicione interatividade às suas páginas web com a linguagem de programação JavaScript!</p>
+          <a href="#" class="btn botao-cor-especial">Matricule-se já</a>
+        </div>
+      </article>
+
+    
+      </div>
+    </section>
+
+
+   
+</main>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <dialog class="modal-content">
+      <header class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Entre em contato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>
+      <main class="modal-body">
+
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Endereço de e-smail </label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Nome</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="insira seu nome">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Mensagem</label>
+            <textarea  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>
+
+      </main>
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn botao-cor-especial">Enviar</button>
+      </footer>
+    </dialog>
+  </div>
+</div>
+  <script src=""></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+function flip() {
+    document.querySelector('.flip-card-inner').classList.toggle('flipped');
+  }
+
+</script>
+</body>
+</html>
