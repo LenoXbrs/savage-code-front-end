@@ -8,7 +8,7 @@
 .button-card{
     
     background-color: #009442;
-    outline: none;
+    border: none;
     
     
 }
@@ -20,7 +20,13 @@
   }
 
   .campo-card{
+    border: none;
     background-color: #121214;
     border-radius: 5px;
   }
- 
+
+  a{
+    color:#009442;
+  }
+  
+  
