@@ -1,0 +1,32 @@
+.background-card{
+   background-color: #202024;
+  padding: 50px;
+  width: 400px;
+   border-radius: 10px;
+}
+
+.button-card{
+    
+    background-color: #009442;
+    border: none;
+    
+    
+}
+.font-tittle{
+    font-size: 42px;
+    font-family: 'Anton', sans-serif;
+   color:#009442
+
+  }
+
+  .campo-card{
+    border: none;
+    background-color: #121214;
+    border-radius: 5px;
+  }
+
+  a{
+    color:#009442;
+    text-decoration: none;
+    border-bottom: none;
+  }
