@@ -44,3 +44,12 @@
     background-color: #0ad160;
     
   }
+  .email {
+    padding-left: 40px; /* ajuste o padding para evitar que o texto fique sobreposto ao ícone */
+  }
+  
+  .input-group-text {
+    font-size: 1.5rem; /* ajuste o tamanho do ícone conforme necessário */
+  }
+
+  
