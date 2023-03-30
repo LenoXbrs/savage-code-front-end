@@ -15,7 +15,7 @@
 }
 .font-tittle{
     font-size: 42px;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Inter', sans-serif;
    color:#009442
 
   }
@@ -50,6 +50,24 @@
   
   .input-group-text {
     font-size: 1.5rem; /* ajuste o tamanho do ícone conforme necessário */
+    
   }
 
-  
+
+  .input-group input:focus {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    
+  }
+
+  .comborda {
+    border: 1px solid #6b6363;
+    padding: 10px; /* Adicione um preenchimento para dar espaço à borda */
+  }
+
+  .cor-registro{
+    color:#009442
+  }
+
+
