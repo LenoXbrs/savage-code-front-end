@@ -5,6 +5,10 @@
    border-radius: 10px;
    box-shadow: 4px 4px 3px black;
 }
+.bg-main{
+  background-color: #121214;
+}
+
 
 .button-card{
     
@@ -72,4 +76,7 @@
     color:#009442
   }
 
+  .p-login{
+    font-size: 14px;
+  }
 
