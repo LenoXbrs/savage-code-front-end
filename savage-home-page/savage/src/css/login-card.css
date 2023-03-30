@@ -1,9 +1,17 @@
 .background-card{
    background-color: #202024;
-  padding: 50px;
-  width: 400px;
-   border-radius: 10px;
+   padding: 50px;
+   width: 400px;
+   border-radius: 8px;
    box-shadow: 4px 4px 3px black;
+}
+
+.background-card-cadastro{
+  background-color: #202024;
+  padding: 50px;
+  width: 430px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 3px black;
 }
 
 .button-card{
@@ -17,7 +25,7 @@
 .font-tittle{
     font-size: 42px;
     font-family: 'Inter', sans-serif;
-   color:#009442
+    color:#009442
 
   }
 
@@ -72,4 +80,7 @@
     color:#009442
   }
 
+  .p-fonte-login{
+    font-size: 14px;
+   }
 
