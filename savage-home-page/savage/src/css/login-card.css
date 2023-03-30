@@ -3,6 +3,7 @@
   padding: 50px;
   width: 400px;
    border-radius: 10px;
+   box-shadow: 4px 4px 3px black;
 }
 
 .button-card{
@@ -24,6 +25,7 @@
     border: none;
     background-color: #121214;
     border-radius: 5px;
+   
     transition: all 0.3s linear;
   }
 
