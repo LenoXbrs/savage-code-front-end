@@ -1,0 +1,11 @@
+.full-layout{
+    viewport-fit: 100vh;
+}
+
+.fill-container{
+ width: auto;
+ height: auto;
+}
+.layout-bg-color{
+    background-color: #121214;
+}
