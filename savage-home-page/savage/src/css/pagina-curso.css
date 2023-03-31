@@ -43,11 +43,28 @@ i.perfil{
     text-decoration: none;
   }
 
+  .imagem-carrosel-um{
+    object-fit: cover;
+   width: 100%;
 
-  textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-    text-decoration: none;
-    background-color: #121214;
-} 
+    height: 400px;
+}
+.imagem-carrosel-dois{
+    object-fit: cover;
+    
+   
+    /* object-position: 0  80%; */
+    height: 400px;
+}
+
+
+
+
+.lista-curso{
+    width: 100%;
+    background-color: #202024;
+}
+
+.card-curso{
+    
+}
