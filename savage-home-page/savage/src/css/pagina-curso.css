@@ -1,0 +1,53 @@
+
+
+.nav-bar-padrao{
+    background-color: #202024;
+}
+
+.barra-busca{
+    background-color: #121214;
+    border: none;
+}
+
+i{
+    color: #009442;;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+i.perfil{
+    font-size: 35px;
+}
+.font-tittle{
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    color:#009442
+
+  }
+
+
+  .dropdown-text{
+    font-family: 'Inter', sans-serif;
+    color:#009442
+  }
+  
+  a{
+    color:#009442;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.2s linear;
+  }
+
+  a:hover {
+    color: #0ad160;
+    text-decoration: none;
+  }
+
+
+  textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    text-decoration: none;
+    background-color: #121214;
+} 
