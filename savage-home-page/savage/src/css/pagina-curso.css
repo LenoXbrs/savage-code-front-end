@@ -72,3 +72,14 @@ i.perfil{
   background-color: #202024;
   border: none;
 }
+
+.obj-footer{
+  background-color: #202024;
+ 
+}
+
+.separa-footer{
+  margin-top: 15%;
+  margin-left: 1px;
+  font-family: 'Inter', sans-serif;
+}
