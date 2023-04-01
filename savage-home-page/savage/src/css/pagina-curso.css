@@ -57,7 +57,9 @@ i.perfil{
     height: 400px;
 }
 
-
+.next-and-prev{
+  width: 2em;
+}
 
 
 .lista-curso{
