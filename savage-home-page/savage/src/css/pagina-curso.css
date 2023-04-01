@@ -65,6 +65,7 @@ i.perfil{
 .lista-curso{
     width: 100%;
     background-color: #202024;
+    border-radius: 3em;
 }
 
 .botao-carrosel{
