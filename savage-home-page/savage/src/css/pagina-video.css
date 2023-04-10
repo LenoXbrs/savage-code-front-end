@@ -31,8 +31,9 @@
 }
 
 
-.box-comentario{
+.box-fazer-comentario{
     background-color: #202024;
+    resize: none;
     color: beige;
 }
 
