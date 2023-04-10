@@ -36,4 +36,36 @@
     color: beige;
 }
 
+.bg-accordion{
+    background-color: #3A3A41
+}
+
+.accordion-corpo{
+    background-color: #202024;
+    text-decoration: none;
+}
+
+
+.nav-bar-padrao{
+    background-color: #202024;
+}
+
+.barra-busca{
+    background-color: #121214;
+    border: none;
+}
+
+ 
+a{
+    color:#ffffff;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.2s linear;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
 
