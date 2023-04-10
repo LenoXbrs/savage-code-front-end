@@ -24,7 +24,7 @@
    
 
     <!--nav bar-->
-    <nav class="navbar navbar-expand-lg nav-bar-padrao mb-3">
+    <nav class="navbar navbar-v navbar-expand-lg nav-bar-padrao mb-3">
         <div class="container-fluid">
           <a style="color:#009442;
           text-decoration: none;
@@ -165,7 +165,7 @@
                   <div class="col-6  text-light fw-semibold fs-5">Titulo do video</div>
                   <div class="col-6 text-end">
                     
-                    <button type="button" class="btn btn-outline-dark border-light botao-finaliza  text-light ">Finalizar aula <i class="bi bi-check-circle text-success d-none"></i> </button>
+                    <button type="button" class="btn btn-outline-dark border-light botao-finaliza my-button text-light ">Finalizar aula  <i class="bi bi-check-circle text-success my-icon d-none"></i> </button>
                   
                 </div>
                
@@ -216,15 +216,34 @@
       <!--Comentarios, 2 row e na segunda coloca display block / um hr / uma text area sem efeito/-->
      
   
+      
 
 
 
+   
 
 
 
+    </div>   
+          
+    <script>
+ 
+const myButton = document.querySelector('.my-button');
 
 
-    </div>
+myButton.addEventListener('click', () => {
+
+  const myIcon = document.querySelector('.my-icon');
+
+  if (!myIcon.classList.contains('d-none')) {
+    myIcon.classList.add('d-none');
+  } else {
+    myIcon.classList.remove('d-none');
+  }
+});
+
+    </script>
+     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
