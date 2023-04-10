@@ -68,4 +68,40 @@ a{
     text-decoration: none;
   }
 
+i.navbar-v{
+    color: #009442;;
+    font-size: 20px;
+    padding-left: 5px;
+}
 
+i.perfil{
+    font-size: 35px;
+}
+
+.box-comentario-resposta {
+    background-color: #202024;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    resize: none;
+  }
+
+
+.no-margin{
+    margin: none;
+    padding: none;
+}
+
+.bg-resp-comentario{
+    background-color: #202024;
+    border-radius: 8px;
+    
+}
+
+.cor-comentario{
+    color: aliceblue;
+}

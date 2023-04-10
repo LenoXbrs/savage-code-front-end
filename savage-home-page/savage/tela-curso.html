@@ -24,7 +24,7 @@
    
 
     <!--nav bar-->
-    <nav class="navbar navbar-v navbar-expand-lg nav-bar-padrao mb-3">
+    <nav class="navbar  navbar-expand-lg nav-bar-padrao mb-3">
         <div class="container-fluid">
           <a style="color:#009442;
           text-decoration: none;
@@ -45,17 +45,17 @@
 
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="bi bi-search "></i></a>
+                      <a class="nav-link" href="#"><i class="bi bi-search navbar-v"></i></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="bi bi-bell "></i></a>
+                      <a class="nav-link" href="#"><i class="bi bi-bell navbar-v"></i></a>
                     </li>
 
 
                     <li class="nav-item dropdown">
                       
                       <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                        <i class="bi bi-person-circle bi-lg perfil" ></i>
+                        <i class="bi bi-person-circle bi-lg perfil navbar-v"  ></i>
                     </a>
                     
                     <ul  class="dropdown-menu dropdown-menu-dark dropdown-menu-end text-center ">
@@ -200,20 +200,37 @@
              
         </div>
 
-        <div class="row">
-            <div class="col">
-                <output>texto ?</output>
-            </div>
-        </div>
+
+       
+
+     
 
       </div>
 
 
+      <div class="container mt-5">
 
+     
+      <div class="row d-flex bg-resp-comentario p-1 mb-3">
+        <div class="col-1 text-end">
+            <i class="bi bi-person-circle  perfil navbar-v"  ></i>
+        </div>
+        <div class="col-11 d-block ">
+            <dl class="cor-comentario">
+                <dt>Nome do individo</dt>
+                <dd>5 min</dd>
+                <dd>comentario</dd>
+            </dl>
+         
+          <hr class="text-light">
+          <form action="">
+            <textarea placeholder="Responder" class="form-control box-comentario-resposta " id="exampleFormControlTextarea1" rows="3"></textarea>
 
-
-
-      <!--Comentarios, 2 row e na segunda coloca display block / um hr / uma text area sem efeito/-->
+          </form>
+        </div>
+    </div>
+</div>
+      <!--Comentarios, 1 row e 2 col, na segunda col coloca display block / um hr / uma text area sem efeito/-->
      
   
       
