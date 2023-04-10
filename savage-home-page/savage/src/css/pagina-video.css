@@ -1,0 +1,39 @@
+.obj-teste{
+    width: 100%;
+    background-color: #039099;
+}
+
+.dark-accordion{
+    background-color: #3A3A41;
+}
+.accordion-bg{
+    background-color: #3A3A41 !important;
+    color: #3A3A41 !important;
+    
+}
+.accordion-color{
+    background-color: #3A3A41 !important;
+    color: #3A3A41 !important;
+    
+
+}
+
+.player-video{
+    width: 100%;
+    height: 360px;
+}
+
+
+
+
+.botao-finaliza:hover{
+ background-color: black;
+}
+
+
+.box-comentario{
+    background-color: #202024;
+    color: beige;
+}
+
+
