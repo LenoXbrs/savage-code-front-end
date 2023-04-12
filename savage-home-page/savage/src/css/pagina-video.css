@@ -1,0 +1,107 @@
+.obj-teste{
+    width: 100%;
+    background-color: #039099;
+}
+
+.dark-accordion{
+    background-color: #3A3A41;
+}
+.accordion-bg{
+    background-color: #3A3A41 !important;
+    color: #3A3A41 !important;
+    
+}
+.accordion-color{
+    background-color: #3A3A41 !important;
+    color: #3A3A41 !important;
+    
+
+}
+
+.player-video{
+    width: 100%;
+    height: 360px;
+}
+
+
+
+
+.botao-finaliza:hover{
+ background-color: black;
+}
+
+
+.box-comentario{
+    background-color: #202024;
+    color: beige;
+}
+
+.bg-accordion{
+    background-color: #3A3A41
+}
+
+.accordion-corpo{
+    background-color: #202024;
+    text-decoration: none;
+}
+
+
+.nav-bar-padrao{
+    background-color: #202024;
+}
+
+.barra-busca{
+    background-color: #121214;
+    border: none;
+}
+
+ 
+a{
+    color:#ffffff;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.2s linear;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+i.navbar-v{
+    color: #009442;;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+i.perfil{
+    font-size: 35px;
+}
+
+.box-comentario-resposta {
+    background-color: #202024;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    resize: none;
+  }
+
+
+.no-margin{
+    margin: none;
+    padding: none;
+}
+
+.bg-resp-comentario{
+    background-color: #202024;
+    border-radius: 8px;
+    
+}
+
+.cor-comentario{
+    color: aliceblue;
+}
