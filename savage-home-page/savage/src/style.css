@@ -89,6 +89,55 @@
     background-color: #0ad160;
 }
 
+.background-sobre{
+  background-color: #202024;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px black;
+}
+
+.background-perfil{
+  background-color: #202024;
+  padding: 50px;
+  width: 350px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px black;
+}
+
+.background-sobre h5{
+  text-align: center;
+  color: grey;
+}
+
+.background-info{
+  background-color: #202024;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+p {
+  margin-bottom: 0rem;
+}
+
+.comentario{
+  background-color: #202024;
+}
+
+.comentario::placeholder{
+  color: #ffffff;
+}
+
+textarea#comentario-sobre {
+  background-color: #202024;
+  color: white;
+}
+
+
+
+
+
+
 
 
 
