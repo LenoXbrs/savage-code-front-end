@@ -21,10 +21,7 @@
         <!--nav bar-->
         <nav class="navbar navbar-expand-lg nav-bar-padrao fixed-top">
             <div class="container-fluid">
-              <a style="color:#009442;
-              text-decoration: none;
-              border-bottom: none;
-              transition: all 0.2s linear;"  class="navbar-brand pe-4 ps-4 fw-bolder font-tittle" href="#">SAVAGE CODE</a>
+              <a style="color:#009442;"  class="navbar-brand pe-4 ps-4 fw-bolder font-titulo" href="principal.html">SAVAGE CODE</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -43,7 +40,7 @@
                           <a class="nav-link" href="#"><i class="bi bi-search "></i></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="bi bi-bell "></i></a>
+                          <button class="nav-link" href="#"><i class="bi bi-bell "></i></button>
                         </li>
     
     
@@ -54,10 +51,10 @@
                         </a>
                         
                         <ul  class="dropdown-menu dropdown-menu-dark dropdown-menu-end text-center ">
-                            <li data-aos="fade-down"><a class="dropdown-item dropdown-text fw-bolder" href="#">Perfil</a></li>
-                            <li><a class="dropdown-item dropdown-text fw-bolder" href="#">Inicio</a></li>
+                            <li data-aos="fade-down"><a class="dropdown-item dropdown-text fw-bolder" href="perfil.html">Perfil</a></li>
+                            <li><a class="dropdown-item dropdown-text fw-bolder" href="principal.html">Inicio</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item dropdown-text fw-bolder" href="#">Sair</a></li>
+                            <li><a class="dropdown-item dropdown-text fw-bolder" href="login-page.html">Sair</a></li>
                             
                              </ul>
                         </li>
@@ -80,11 +77,16 @@
               </div>
             </section>
 
-            <div class="container-fill">
+            <div class="container-fluid">
             <div class="row">
             <div class="col-3">
             <div class="perfil ms-5 background-perfil text-center text-light" style="margin-top: -90px; z-index: 1; position: absolute;">
             <div class="foto-perfil mb-4">
+              <div class="row text-end">
+             <a href="">
+              <i class="bi bi-pencil-square"></i>
+             </a>  
+              </div>
                <i class="bi bi-person-circle bi-lg perfil"  style="
                font-size: 120px;"></i>
             </div>
@@ -133,7 +135,9 @@
                         </div>
                         <div class="row d-flex text-end pt-5">
                             <div class="col">
-                                <button type="button" class="btn btn-outline-dark border-light botao-finaliza my-button text-light ">CONTINUAR DA ÚLTIMA AULA<i class="bi bi-check-circle text-success my-icon d-none"></i> </button>
+                              <a href="tela-curso.html" class="btn btn-outline-dark border-light botao-finaliza my-button text-light ">CONTINUAR DA ÚLTIMA AULA</a>
+                              
+                          <!--      <button type="button" class="btn btn-outline-dark border-light botao-finaliza my-button text-light ">CONTINUAR DA ÚLTIMA AULA</button> -->
                             </div>
                         </div>
                      </div>
