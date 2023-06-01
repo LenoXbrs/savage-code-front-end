@@ -1,0 +1,12 @@
+- Como fazer sessão? Usuário logado
+
+- Como autenticar um usuário cadastrado: login e senha
+
+- Tela de Cadastro: Senha e Confirme a Senha -> como fazer verificação?
+
+- Tela admin: 
+    * tela com usuarios
+    * cadastrar aulas
+
+- Carregar (GET) aulas no carrossel
+
