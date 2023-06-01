@@ -19,7 +19,7 @@ app.use(express.json());
 const router = express.Router();
 
 //ROTAS USUÁRIO
-/* GET usuario */
+/* GET usuario pelo ID*/
 router.get('/usuario/:id?', async function(req, res, next) {
     try{
       const db = await connect();
@@ -33,6 +33,26 @@ router.get('/usuario/:id?', async function(req, res, next) {
       res.status(400).json({erro: `${ex}`});
     }
 })
+
+//-----------------------------------------------------------------------------------------------
+//Pesquisar AULAS por parametro idModulo:
+//  ->trocar onde tem id por idModulo
+//
+//GET usuario por parametro
+// router.get('/usuario/:id?', async function(req, res, next) {
+//     try{
+//       const db = await connect();
+//       if(req.params.id)
+//         res.json(await db.collection("usuario").findOne({_id: new ObjectId(req.params.id)}));
+//       else
+//         res.json(await db.collection("usuario").find().toArray());
+//     }
+//     catch(ex){
+//       console.log(ex);
+//       res.status(400).json({erro: `${ex}`});
+//     }
+// })
+//-------------------------------------------------------------------------------------------------
 
 
 // POST /usuario
