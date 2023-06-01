@@ -1,12 +1,20 @@
-- Como fazer sessão? Usuário logado
+-> Como fazer sessão? Usuário logado
 
-- Como autenticar um usuário cadastrado: login e senha
+-> Como autenticar um usuário cadastrado: login e senha
+    * Criar rota para receber dados do front e comparar com os dados do BD
 
-- Tela de Cadastro: Senha e Confirme a Senha -> como fazer verificação?
 
-- Tela admin: 
-    * tela com usuarios
-    * cadastrar aulas
+-> Tela de Cadastro: Senha e Confirme a Senha -> como fazer verificação?
 
-- Carregar (GET) aulas no carrossel
+
+-> Tela ADMIN (criar "admin.html"): 
+    * tabela com USUARIOS (possibilidade de DELETAR)
+    * cadastrar CURSOS
+    * cadastrar MÓDULOS
+    * cadastrar AULAS
+
+
+-> Carregar (GET) "Cursos" no carrossel da "principal.html"
+
+-> Carregar "Módulos" (GET /modulo/:idCurso) e "Aulas" (GET /aula/:idModulo) em "tela-curso.html"
 
