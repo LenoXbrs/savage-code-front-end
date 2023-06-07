@@ -18,8 +18,11 @@ app.use(express.json());
 //Definindo Rotas
 const router = express.Router();
 
-//ROTAS USUÁRIO
-/* GET usuario pelo ID*/
+//-------------------------------------
+//---------   Rotas USUÁRIO   ---------
+//-------------------------------------
+
+/* GET usuario */
 router.get('/usuario/:id?', async function(req, res, next) {
     try{
       const db = await connect();
@@ -34,27 +37,6 @@ router.get('/usuario/:id?', async function(req, res, next) {
     }
 })
 
-//-----------------------------------------------------------------------------------------------
-//Pesquisar AULAS por parametro idModulo:
-//  ->trocar onde tem id por idModulo
-//
-//GET usuario por parametro
-// router.get('/usuario/:id?', async function(req, res, next) {
-//     try{
-//       const db = await connect();
-//       if(req.params.id)
-//         res.json(await db.collection("usuario").findOne({_id: new ObjectId(req.params.id)}));
-//       else
-//         res.json(await db.collection("usuario").find().toArray());
-//     }
-//     catch(ex){
-//       console.log(ex);
-//       res.status(400).json({erro: `${ex}`});
-//     }
-// })
-//-------------------------------------------------------------------------------------------------
-
-
 // POST /usuario
 router.post('/usuario', async function(req, res, next){
     try{
@@ -67,7 +49,6 @@ router.post('/usuario', async function(req, res, next){
       res.status(400).json({erro: `${ex}`});
     }
 })
-
 
 // PUT /usuario/id
 router.put('/usuario/:id', async function(req, res, next){
@@ -82,7 +63,6 @@ router.put('/usuario/:id', async function(req, res, next){
     }
 })
 
-
 // DELETE /usuario/id
 router.delete('/usuario/:id', async function(req, res, next){
     try{
@@ -95,6 +75,242 @@ router.delete('/usuario/:id', async function(req, res, next){
     }
 })
 
+
+// //-------------------------------------
+// //----------   Rotas CURSO   ----------
+// //-------------------------------------
+
+// //  GET /curso 
+// router.get('/curso/:id?', async function(req, res, next) {
+//     try{
+//       const db = await connect();
+//       if(req.params.id)
+//         res.json(await db.collection("curso").findOne({_id: new ObjectId(req.params.id)}));
+//       else
+//         res.json(await db.collection("curso").find().toArray());
+//     }
+//     catch(ex){
+//       console.log(ex);
+//       res.status(400).json({erro: `${ex}`});
+//     }
+// })
+
+// //  POST /curso
+// router.post('/curso', async function(req, res, next){
+//     try{
+//       const curso = req.body;
+//       const db = await connect();
+//       res.json(await db.collection("curso").insertOne(curso));
+//     }
+//     catch(ex){
+//       console.log(ex);
+//       res.status(400).json({erro: `${ex}`});
+//     }
+// })
+
+// //  PUT /curso/id
+// router.put('/curso/:id', async function(req, res, next){
+//     try{
+//       const curso = req.body;
+//       const db = await connect();
+//       res.json(await db.collection("curso").updateOne({_id: new ObjectId(req.params.id)}, {$set: curso}));
+//     }
+//     catch(ex){
+//       console.log(ex);
+//       res.status(400).json({erro: `${ex}`});
+//     }
+// })
+
+// //  DELETE /curso/id
+// router.delete('/curso/:id', async function(req, res, next){
+//     try{
+//       const db = await connect();
+//       res.json(await db.collection("curso").deleteOne({_id: new ObjectId(req.params.id)}));
+//     }
+//     catch(ex){
+//       console.log(ex);
+//       res.status(400).json({erro: `${ex}`});
+//     }
+// })
+
+
+
+//-------------------------------------
+//----------   Rotas MÓDULO   ---------
+//-------------------------------------
+
+//  GET /modulo 
+router.get('/modulo/:id?', async function(req, res, next) {
+    try{
+      const db = await connect();
+      if(req.params.id)
+        res.json(await db.collection("modulo").findOne({_id: new ObjectId(req.params.id)}));
+      else
+        res.json(await db.collection("modulo").find().toArray());
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  POST /modulo
+router.post('/modulo', async function(req, res, next){
+    try{
+      const modulo = req.body;
+      const db = await connect();
+      res.json(await db.collection("modulo").insertOne(modulo));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  PUT /modulo/id
+router.put('/modulo/:id', async function(req, res, next){
+    try{
+      const modulo = req.body;
+      const db = await connect();
+      res.json(await db.collection("modulo").updateOne({_id: new ObjectId(req.params.id)}, {$set: modulo}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  DELETE /modulo/id
+router.delete('/modulo/:id', async function(req, res, next){
+    try{
+      const db = await connect();
+      res.json(await db.collection("modulo").deleteOne({_id: new ObjectId(req.params.id)}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+
+//-------------------------------------
+//----------   Rotas AULA   -----------
+//-------------------------------------
+
+//  GET /aula 
+router.get('/aula/:id?', async function(req, res, next) {
+    try{
+      const db = await connect();
+      if(req.query.idModulo)
+        res.json(await db.collection("aula").find({idModulo: req.query.idModulo}).toArray());
+      if(req.params.id)
+        res.json(await db.collection("aula").findOne({_id: new ObjectId(req.params.id)}));
+      else
+        res.json(await db.collection("aula").find().toArray());
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  POST /aula
+router.post('/aula', async function(req, res, next){
+    try{
+      const aula = req.body;
+      const db = await connect();
+      res.json(await db.collection("aula").insertOne(aula));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  PUT /aula/id
+router.put('/aula/:id', async function(req, res, next){
+    try{
+      const aula = req.body;
+      const db = await connect();
+      res.json(await db.collection("aula").updateOne({_id: new ObjectId(req.params.id)}, {$set: aula}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  DELETE /aula/id
+router.delete('/aula/:id', async function(req, res, next){
+    try{
+      const db = await connect();
+      res.json(await db.collection("aula").deleteOne({_id: new ObjectId(req.params.id)}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+
+//-------------------------------------
+//-------   Rotas COMENTARIO   --------
+//-------------------------------------
+
+//  GET /comentario 
+router.get('/comentario/:id?', async function(req, res, next) {
+    try{
+      const db = await connect();
+      if(req.query.idAula)
+        res.json(await db.collection("comentario").find({idAula: req.query.idAula}).toArray());
+      if(req.params.id)
+        res.json(await db.collection("comentario").findOne({_id: new ObjectId(req.params.id)}));
+      else
+        res.json(await db.collection("comentario").find().toArray());
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  POST /comentario
+router.post('/comentario', async function(req, res, next){
+    try{
+      const comentario = req.body;
+      const db = await connect();
+      res.json(await db.collection("comentario").insertOne(comentario));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  PUT /comentario/id
+router.put('/comentario/:id', async function(req, res, next){
+    try{
+      const comentario = req.body;
+      const db = await connect();
+      res.json(await db.collection("comentario").updateOne({_id: new ObjectId(req.params.id)}, {$set: comentario}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
+
+//  DELETE /comentario/id
+router.delete('/comentario/:id', async function(req, res, next){
+    try{
+      const db = await connect();
+      res.json(await db.collection("comentario").deleteOne({_id: new ObjectId(req.params.id)}));
+    }
+    catch(ex){
+      console.log(ex);
+      res.status(400).json({erro: `${ex}`});
+    }
+})
 
 app.use('/', router);
 
