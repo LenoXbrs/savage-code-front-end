@@ -20,7 +20,7 @@
     
     <title>Savage Code</title>
 </head>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 <body class="full-layout layout-bg-color" >
@@ -49,13 +49,13 @@
                 
                
                
-                <form class="row needs-validation" novalidate >
+                <form id="loginForm" class="row needs-validation" novalidate >
 
                     <div class="col">
                        
                             <div class="pb-2">
                               <div class="input-group"> 
-                                <input type="email" class="form-control email campo-card" placeholder="E-mail" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="email" class="form-control email campo-card" placeholder="E-mail" id="email" aria-describedby="emailHelp">
                                 <span class="input-group-text bi bi-envelope-fill"></span>
                               </div>
                               
@@ -63,14 +63,14 @@
 
                               <div class="pb-4 text-start">
                                 <div class="input-group"> 
-                                  <input type="password" class="form-control password campo-card" placeholder="Senha" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="password" class="form-control password campo-card" placeholder="Senha" id="senha" aria-describedby="emailHelp">
                                   <span class="input-group-text bi bi-lock-fill"></span>                                  
                                 </div>
                                 <a href="recuperar-senha.html">Esqueci minha senha</a>
                                 </div>                          
 
                                
-                              <a type="submit" href="principal.html" class="btn btn-primary col-12 button-card">Entrar</a>
+                              <button id="btnLogin" type="submit" class="btn btn-primary col-12 button-card">Entrar</button>
                              
                                
                         
@@ -97,7 +97,37 @@
         
     </div>
 </div>
+<script>
+  const loginForm = document.getElementById('loginForm');
 
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+  console.log(email)
+
+    const loginData = { email, senha };
+
+
+    axios.post('http://localhost:3000/login', loginData)
+      .then(response => {
+        const userData = response.data;
+        console.log(userData);
+        if(userData){
+          sessionStorage.setItem('userData', JSON.stringify(userData));
+        window.location.href = 'perfil.html';
+        }
+       else{
+        location.reload();
+       }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
