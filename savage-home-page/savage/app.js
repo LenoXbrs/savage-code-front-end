@@ -18,6 +18,20 @@ app.use(express.json());
 //Definindo Rotas
 const router = express.Router();
 
+async function verificarEmail(email) {
+  const db = await connect();
+  if (db instanceof Error) {
+    throw new Error("Can't connect to the database");
+  }
+
+  const collection = db.collection('usuario'); // Substitua 'nomedacolecao' pelo nome da sua coleção
+
+  const user = await collection.findOne({ email });
+  return user; // Retorna o usuário encontrado ou null se o e-mail não existir
+}
+
+
+
 //-------------------------------------
 //---------   Rotas USUÁRIO   ---------
 //-------------------------------------
@@ -74,6 +88,22 @@ router.delete('/usuario/:id', async function(req, res, next){
       res.status(400).json({erro: `${ex}`});
     }
 })
+
+
+app.post('/login', async (req, res) => {
+  const { email, senha } = req.body;
+
+  const user = await verificarEmail(email);
+  if (!user) {
+    return res.status(400).json({ mensagem: 'E-mail não encontrado.' });
+  }
+
+  // Restante da lógica de autenticação...
+
+ console.log('Usuario encontrado!')
+  res.json(user);
+});
+
 
 
 // //-------------------------------------
