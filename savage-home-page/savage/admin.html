@@ -17,11 +17,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" href="src/css/bg-css.css">
+    <link rel="stylesheet" href="src/css/login-card.css">
 </head>
-<body>
+<body class="" style="background-color: #f2f2f2;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     
+    <div class="container-fluid bg-black">
+        <div class="row mb-3">
+            <h6 class="font-tittle fw-bold text-start mt-2" style="font-size: 24px; margin-left: 30px;">SAVAGE CODE</h6>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mb-5">
+            <div id="output"></div>
+        </div>
+    </div>
+
     <div class="container">
 
         <div class="accordion" id="accordionExample">
@@ -33,10 +47,30 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-
+                  
                   <!-- Cadastro Módulos -->
-                  <div class="container"></div>
+                  <div class="container">
+                    <div class="row">
+                        <div class="col"></div>
+
+                        <div class="col">
+                            <form action="" id="formModulo">
+                                <div class="mb-2">
+                                    <label for="matricula" class="form-label">Nome do módulo</label>
+                                    <input type="text" class="form-control" id="nomeModulo">
+                                </div>
+                                <div class="mb-2 mt-4">
+                                    <div id="botao">
+                                        <button type="button" id="btnModulo" class="btn btn-success">Cadastrar módulo</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col"></div>
+                    </div>
+
+                  </div>
 
                 </div>
               </div>
@@ -56,31 +90,35 @@
                         <div class="col"></div>
 
                         <div class="col">
-            
-                            <form action="" id="form">
-                                <input type="hidden" class="form-control" id="_id">
-                                <div class="mb-3">
-                                    <label for="matricula" class="form-label">Matrícula</label>
-                                    <input type="text" class="form-control" id="matricula">
-                                    
+                            <form action="" id="formAula">
+                                <div class="mb-2">
+                                    <label for="nomeAula" class="form-label">Nome da aula</label>
+                                    <input type="text" class="form-control" id="nomeAula">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="nome" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="nome">
+                                <div class="mb-2">
+                                    <label for="descricaoAula" class="form-label">Descrição</label>
+                                    <textarea class="form-control" id="descricaoAula" rows="5" cols="10"></textarea>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="disciplina" class="form-label">Disciplina</label>
-                                    <input type="text" class="form-control" id="disciplina">
+                                <div class="mb-2">
+                                    <label for="idModuloAula" class="form-label">idModulo</label>
+                                    <input type="text" class="form-control" id="idModuloAula">
                                 </div>
-                                <div class="mb-3">
-            
-                                <div id="botao">
-                                    <button type="button" id="btn" class="btn btn-success">Cadastrar</button>
+                                <div class="mb-2">
+                                    <label for="srcAula" class="form-label">src</label>
+                                    <input type="text" class="form-control" id="srcAula">
                                 </div>
-                                    
+                                <div class="mb-2">
+                                    <label for="imgAula" class="form-label">img</label>
+                                    <input type="text" class="form-control" id="imgAula">
+                                </div>
+                                <div class="mb-2 mt-4">
+                                    <div id="botao">
+                                        <button type="button" id="btnAula" class="btn btn-success">Cadastrar aula</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
+
                         <div class="col"></div>
                     </div>
                   </div>
@@ -97,10 +135,29 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-
+                  
                   <!-- Tabela Módulos -->
-                  <div class="container"></div>
+                  <div class="container">
+
+                    <div class="row">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Editar</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                    
+                                <!-- <th scope="col">Excluir</th> -->
+            
+                              </tr>
+                            </thead>
+                            <tbody id="exibirModulos">
+                              
+                            </tbody>
+                          </table>
+                    </div>
+
+                  </div>
 
                 </div>
               </div>
@@ -114,10 +171,29 @@
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     
                     <!-- Tabela Aulas -->
-                    <div class="container"></div>
+                    <div class="container">
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">idModulo</th>
+                                    <th scope="col">Src</th>
+                                    <th scope="col">Img</th>
+                                    <th scope="col">Excluir</th>
+                
+                                  </tr>
+                                </thead>
+                                <tbody id="exibirAulas">
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
 
                   </div>
                 </div>
@@ -131,10 +207,28 @@
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     
                     <!-- Tabela Usuários -->
-                    <div class="container"></div>
+                    <div class="container">
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <!-- <th scope="col">Editar</th> -->
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Email</th>
+                                    <!-- <th scope="col">Excluir</th> -->
+                
+                                  </tr>
+                                </thead>
+                                <tbody id="exibirUsuarios">
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
                     
                   </div>
                 </div>
@@ -142,9 +236,170 @@
 
           </div>
 
-        
-
     </div>
+
+    <script>
+    //-----------------------------
+    //---- Axios para MÓDULOS -----
+    //-----------------------------
+        axios.get('http://localhost:3000/modulo')
+            .then(function (response){
+             document.getElementById('exibirModulos').innerHTML = response.data.map(function (modulo){
+                return (
+                    '<tr>' +
+                        '<td> <a class="btn btn-outline-info btn-sm" href="#" role="button" onclick="javascript:return editarModulo(`'+modulo._id+'`);">Editar</a> </td>' +
+                        '<th scope="row">'+ modulo._id +'</th>' +
+                        '<td>'+ modulo.nome +'</td>' +
+                    '</tr>'
+                );
+             }).join('');   
+            })
+            .catch(function (err){
+                document.getElementById('output').innerHTML = '<div class="alert alert-danger" role="alert">'+ err.message +'</div>';
+            });
+
+        function editarModulo(id) {
+            window.location.href = 'formModulo.html?id='+ id +'';
+        }
+
+
+        const formModulo        = document.getElementById("formModulo");
+        const nomeModuloInput   = document.getElementById("nomeModulo");
+        
+        btnModulo.addEventListener("click", () => {
+            const nomeModulo  = nomeModuloInput.value;
+
+            axios.post("http://localhost:3000/modulo", {
+                nome: nomeModulo
+            })
+            .then((response) => {
+                output.innerHTML    =   `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Perfeito!</strong> Cadastro efetuado com sucesso.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>`;
+                formModulo.reset()                       
+                        
+            })
+            .catch(function (err){
+                document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+            })
+
+        });
+
+            
+    </script>
+
+    <script>
+    //-----------------------------
+    //------ Axios para AULAS -----
+    //-----------------------------
+        axios.get('http://localhost:3000/aula')
+            .then(function (response){
+            document.getElementById('exibirAulas').innerHTML = response.data.map(function (aula){
+                return (
+                    '<tr>' +
+                        '<td> <a class="btn btn-outline-info btn-sm" href="#" role="button" onclick="javascript:return editarAula(`'+aula._id+'`);">Editar</a> </td>' +
+                        '<th scope="row">'+ aula._id +'</th>' +
+                        '<td>'+ aula.nome +'</td>' +
+                        '<td>'+ aula.idModulo +'</td>' +
+                        '<td>'+ aula.src +'</td>' +
+                        '<td>'+ aula.img +'</td>' +
+                        '<td> <a class="btn btn-outline-danger btn-sm" href="#" role="button" onclick="javascript:return excluirAula(`'+aula._id+'`);">Excluir</a> </td>' +
+                    '</tr>'
+                );
+            }).join('');   
+            })
+            .catch(function (err){
+                document.getElementById('output').innerHTML = '<div class="alert alert-danger" role="alert">'+ err.message +'</div>';
+            });
+
+        function excluirAula(id) {
+            axios.delete('http://localhost:3000/aula/'+ id +'')
+            .then(function(response){
+                location.reload();
+            })
+            .catch(function (err){
+                document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+            });
+        }
+
+        function editarAula(id) {
+            window.location.href = 'formAula.html?id='+ id +'';
+        }
+
+
+        const formAula           = document.getElementById("formAula");
+        const nomeAulaInput      = document.getElementById("nomeAula");
+        const descricaoAulaInput = document.getElementById("descricaoAula");
+        const idModuloAulaInput  = document.getElementById("idModuloAula");
+        const srcAulaInput       = document.getElementById("srcAula");
+        const imgAulaInput       = document.getElementById("imgAula");
+        
+        btnAula.addEventListener("click", () => {
+        const nomeAula      = nomeAulaInput.value;
+        const descricaoAula = descricaoAulaInput.value;
+        const idModuloAula  = idModuloAulaInput.value;
+        const srcAula       = srcAulaInput.value;
+        const imgAula       = imgAulaInput.value;
+
+        axios.post("http://localhost:3000/aula", {
+            nome: nomeAula,
+            descricao: descricaoAula,
+            idModulo: idModuloAula,
+            src: srcAula,
+            img: imgAula
+        })
+        .then((response) => {
+            output.innerHTML    =   `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Perfeito!</strong> Cadastro efetuado com sucesso.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>`;
+            formAula.reset()                       
+                    
+        })
+        .catch(function (err){
+            document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        })
+
+        });
+
+            
+    </script>
+
+    <script>
+    //-----------------------------
+    //---- Axios para USUÁRIOS ----
+    //-----------------------------
+        axios.get('http://localhost:3000/usuario')
+            .then(function (response){
+            document.getElementById('exibirUsuarios').innerHTML = response.data.map(function (usuario){
+                return (
+                    '<tr>' +
+                        '<th scope="row">'+ usuario._id +'</th>' +
+                        '<td>'+ usuario.username +'</td>' +
+                        '<td>'+ usuario.nome +'</td>' +
+                        '<td>'+ usuario.email +'</td>' +
+                        // '<td> <a class="btn btn-outline-danger btn-sm" href="#" role="button" onclick="javascript:return excluirUsuario(`'+usuario._id+'`);">Excluir</a> </td>' +
+                    '</tr>'
+                );
+            }).join('');   
+            })
+            .catch(function (err){
+                document.getElementById('output').innerHTML = '<div class="alert alert-danger" role="alert">'+ err.message +'</div>';
+            });
+
+        function excluirUsuario(id) {
+            axios.delete('http://localhost:3000/usuario/'+ id +'')
+            .then(function(response){
+                location.reload();
+            })
+            .catch(function (err){
+                document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+            });
+        }
+
+            
+    </script>
 
 </body>
 </html>

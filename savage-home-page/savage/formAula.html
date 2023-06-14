@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Aula</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" href="src/css/bg-css.css">
+    <link rel="stylesheet" href="src/css/login-card.css">
+</head>
+<body class="" style="background-color: #f2f2f2;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+        const urlParams =   new URLSearchParams(window.location.search);
+        const id        =   urlParams.get("id");
+
+        if (id !== null) {
+
+            axios.get('http://localhost:3000/aula/'+ id +'')
+            .then(function (response) {
+                document.getElementById('_id').value           =   response.data._id;
+                document.getElementById('nomeAula').value      =   response.data.nome;
+                document.getElementById('descricaoAula').value =   response.data.descricao;
+                document.getElementById('idModuloAula').value  =   response.data.idModulo;
+                document.getElementById('srcAula').value       =   response.data.src;
+                document.getElementById('imgAula').value       =   response.data.img;
+
+            })
+            .catch(function (err) {
+                alert(err.message);
+            });
+
+        }
+    </script>
+
+    <div class="container-fluid bg-black">
+        <div class="row mb-3">
+            <h6 class="font-tittle fw-bold text-start mt-2" style="font-size: 24px; margin-left: 30px;">SAVAGE CODE</h6>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mb-5">
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <!-- Cadastro Aulas -->
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+
+            <div class="col">
+                <form action="" id="formAula">
+                    <input type="hidden" class="form-control" id="_id">
+                    <div class="mb-2">
+                        <label for="nomeAula" class="form-label">Nome da aula</label>
+                        <input type="text" class="form-control" id="nomeAula">
+                    </div>
+                    <div class="mb-2">
+                        <label for="descricaoAula" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="descricaoAula" rows="5" cols="10"></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <label for="idModuloAula" class="form-label">idModulo</label>
+                        <input type="text" class="form-control" id="idModuloAula">
+                    </div>
+                    <div class="mb-2">
+                        <label for="srcAula" class="form-label">src</label>
+                        <input type="text" class="form-control" id="srcAula">
+                    </div>
+                    <div class="mb-2">
+                        <label for="imgAula" class="form-label">img</label>
+                        <input type="text" class="form-control" id="imgAula">
+                    </div>
+                    <div class="mb-2 mt-4">
+                        <div id="botao">
+                            <button type="button" id="btnAula" class="btn btn-success">Atualizar aula</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <script>
+        const formAula           = document.getElementById("formAula");
+        const _idInput           = document.getElementById("_id");
+        const nomeAulaInput      = document.getElementById("nomeAula");
+        const descricaoAulaInput = document.getElementById("descricaoAula");
+        const idModuloAulaInput  = document.getElementById("idModuloAula");
+        const srcAulaInput       = document.getElementById("srcAula");
+        const imgAulaInput       = document.getElementById("imgAula");
+        
+        btnAula.addEventListener("click", () => {
+            const _id           = _idInput.value;
+            const nomeAula      = nomeAulaInput.value;
+            const descricaoAula = descricaoAulaInput.value;
+            const idModuloAula  = idModuloAulaInput.value;
+            const srcAula       = srcAulaInput.value;
+            const imgAula       = imgAulaInput.value;
+
+            axios.put('http://localhost:3000/aula/'+_id+'', {
+                nome: nomeAula,
+                descricao: descricaoAula,
+                idModulo: idModuloAula,
+                src: srcAula,
+                img: imgAula
+            })
+            .then((response) => {
+                output.innerHTML    =   `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Perfeito!</strong> Cadastro efetuado com sucesso.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>`;
+                formAula.reset()                       
+                        
+            })
+            .catch(function (err){
+                document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+            })
+
+            });
+    </script>
+
+
+</body>
+</html>
