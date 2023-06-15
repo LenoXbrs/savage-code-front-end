@@ -9,7 +9,7 @@ async function connect(){
 
 const express = require('express');
 const app     = express();
-const port    = 3000     //porta padrão
+const port    = 3030     //porta padrão
 
 app.use(require('cors')());
 app.use(express.urlencoded({extended : true}));
@@ -76,6 +76,9 @@ router.put('/usuario/:id', async function(req, res, next){
       res.status(400).json({erro: `${ex}`});
     }
 })
+
+
+
 
 // DELETE /usuario/id
 router.delete('/usuario/:id', async function(req, res, next){

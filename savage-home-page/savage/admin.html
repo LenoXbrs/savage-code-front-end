@@ -242,7 +242,7 @@
     //-----------------------------
     //---- Axios para MÓDULOS -----
     //-----------------------------
-        axios.get('http://localhost:3000/modulo')
+        axios.get('http://localhost:3030/modulo')
             .then(function (response){
              document.getElementById('exibirModulos').innerHTML = response.data.map(function (modulo){
                 return (
@@ -269,7 +269,7 @@
         btnModulo.addEventListener("click", () => {
             const nomeModulo  = nomeModuloInput.value;
 
-            axios.post("http://localhost:3000/modulo", {
+            axios.post("http://localhost:3030/modulo", {
                 nome: nomeModulo
             })
             .then((response) => {
@@ -293,7 +293,7 @@
     //-----------------------------
     //------ Axios para AULAS -----
     //-----------------------------
-        axios.get('http://localhost:3000/aula')
+        axios.get('http://localhost:3030/aula')
             .then(function (response){
             document.getElementById('exibirAulas').innerHTML = response.data.map(function (aula){
                 return (
@@ -314,7 +314,7 @@
             });
 
         function excluirAula(id) {
-            axios.delete('http://localhost:3000/aula/'+ id +'')
+            axios.delete('http://localhost:3030/aula/'+ id +'')
             .then(function(response){
                 location.reload();
             })
@@ -342,7 +342,7 @@
         const srcAula       = srcAulaInput.value;
         const imgAula       = imgAulaInput.value;
 
-        axios.post("http://localhost:3000/aula", {
+        axios.post("http://localhost:3030/aula", {
             nome: nomeAula,
             descricao: descricaoAula,
             idModulo: idModuloAula,
@@ -370,7 +370,7 @@
     //-----------------------------
     //---- Axios para USUÁRIOS ----
     //-----------------------------
-        axios.get('http://localhost:3000/usuario')
+        axios.get('http://localhost:3030/usuario')
             .then(function (response){
             document.getElementById('exibirUsuarios').innerHTML = response.data.map(function (usuario){
                 return (
@@ -389,7 +389,7 @@
             });
 
         function excluirUsuario(id) {
-            axios.delete('http://localhost:3000/usuario/'+ id +'')
+            axios.delete('http://localhost:3030/usuario/'+ id +'')
             .then(function(response){
                 location.reload();
             })

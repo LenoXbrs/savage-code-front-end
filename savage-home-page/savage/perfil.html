@@ -117,7 +117,7 @@ console.log(userData.email, userData.nome,userData.sobre);
                   <p id="comentario-sobre"></p>
                  <hr>
                 <form id="sobreForm">
-                  <textarea class="form-control comentario " placeholder="fale mais de você!"  style="height: 100px"></textarea>
+                  <textarea id="novoCampo" name="novoCampo" class="form-control comentario " placeholder="fale mais de você!"  style="height: 100px"></textarea>
                   <button type="button" class="btn btn-outline-dark border-light botao-finaliza  text-light mt-2 ">Comentar </button>
 
                 </form>
@@ -199,35 +199,40 @@ console.log(userData.email, userData.nome,userData.sobre);
 
 
 
-   const sobreForm = document.getElementById('sobreForm');
+                const sobreForm = document.getElementById('sobreForm');
 
-sobreForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+                sobreForm.addEventListener('submit', (event) => {
+                  event.preventDefault();
 
-  const sobreUsuario = document.getElementById('comentario-sobre').value;
+                  const sobreUsuario = document.getElementById('comentario-sobre').value;
+                  const novoCampo = document.getElementById('novoCampo').value;
 
+                  const sobreData = {
+                    sobreUsuario,
+                    novoCampo,
+                  };
 
+                  const userData = JSON.parse(sessionStorage.getItem('userData'));
+                  const userId = userData._id;
 
+                  const url = `http://localhost:3000/usuario/${userId}`;
 
-  const sobreData = { sobreUsuario };
+                  axios.put(url, sobreData)
+                    .then(response => {
+                      const updatedUserData = response.data;
+                    
+                      if (updatedUserData) {
+                        sessionStorage.setItem('userData', JSON.stringify(updatedUserData));
+                        window.location.href = 'perfil.html';
+                      } else {
+                        location.reload();
+                      }
+                    })
+                    .catch(error => {
+                      console.error(error);
+                    });
+                });
 
-
-  axios.put('http://localhost:3000//usuario/:id', sobreData) // falta isso
-    .then(response => {
-      const userData = response.data;
-     
-      if(userData){
-        sessionStorage.setItem('userData', JSON.stringify(userData));
-      window.location.href = 'perfil.html';
-      }
-     else{
-      location.reload();
-     }
-    })
-    .catch(error => {
-      console.error(error);
-    });
-});
                 </script>
   </body>
 </html>

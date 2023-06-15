@@ -30,7 +30,7 @@
 
         if (id !== null) {
 
-            axios.get('http://localhost:3000/modulo/'+ id +'')
+            axios.get('http://localhost:3030/modulo/'+ id +'')
             .then(function (response) {
                 document.getElementById('_id').value           =   response.data._id;
                 document.getElementById('nomeModulo').value      =   response.data.nome;
@@ -87,7 +87,7 @@
             const _id        = _idInput.value;
             const nomeModulo = nomeModuloInput.value;
             
-            axios.put('http://localhost:3000/modulo/'+_id+'', {
+            axios.put('http://localhost:3030/modulo/'+_id+'', {
                 nome: nomeModulo
             })
             .then((response) => {

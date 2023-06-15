@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/src/css/estrutura.css">
     <link rel="stylesheet" href="src/css/bg-css.css">
     <link rel="stylesheet" href="src/css/pagina-curso.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/css/login-card.css">
+    
     <title>Savage Code</title>
 
 
@@ -138,7 +139,7 @@
 
 
 
-        <section class="container">
+        <section class="container" id="exibirModulos">
 
             <h1 class="text-start text-light p-3">Fundamentos da programação</h1>
 
@@ -171,27 +172,7 @@
                               </article>
                             </div>
 
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
+                        
 
                           
 
@@ -201,86 +182,7 @@
 
                           
                         </div>
-                        <div class="carousel-item">
-                          <div class="row">
-                            <!--para tirar a borda branca é só por p-0-->
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                          
-
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="row">
-                            <!--para tirar a borda branca é só por p-0-->
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                            <div class="col">
-                              <article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">
-                                <img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">
-                                <div class="card-body cor-card text-light">
-                                  <h5 class="card-title">JPA</h5>
-                                  <p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>
-                                  <a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>
-                                </div>
-                              </article>
-                            </div>
-
-                          
-
-                          </div>
-                        </div>
+                  
                       </div>
                     
                     </div>
@@ -510,5 +412,83 @@
     AOS.init();
   </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
+<script>
+       axios.get('http://localhost:3030/modulo')
+            .then(function (response){
+              
+             document.getElementById('exibirModulos').innerHTML = response.data.map(function (modulo){
+                return (
+                  ' <h1 class="text-start text-light p-3">'+ modulo.nome +'</h1>' +
+
+                                    '<div class="lista-curso row d-flex align-items-center justify-content-md-center pb-3">'+
+                                      
+
+                                        ' <div class="col-1 text-center">' +
+                                           ' <button class="botao-carrosel" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">'+
+                                            '<span class="carousel-control-prev-icon" aria-hidden="true"></span>'+
+                                            '<span class="visually-hidden">Previous</span>'+
+                                            '</button>'+
+                                            '</div>'+
+
+                                            ' <div class="col-9">'+
+
+                                              '<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >'+
+                                                '<div class="carousel-inner">'+
+                                                  '<div class="carousel-item active">'+
+                                                  
+                                                    '<div class="row">'+
+                                                      '<!--para tirar a borda branca é só por p-0-->'+
+                                                      '<div class="col">'+
+                                                        '<article class="card borda-cor-especial card-largura p-1 m-2 mt-4 col-12 " data-aos="zoom-out-up">'+
+                                                          '<img class="card-posicao-imagem"  src="src/img/jpalogo.jpg" alt="tigela com beterrabas e dentes de alho assados em primeiro plano, com ingredientes ao fundo">'+
+                                                          '<div class="card-body cor-card text-light">'+
+                                                            '<h5 class="card-title">JPA</h5>'+
+                                                            '<p class="card-text">Desenvolva aplicações web avançadas usando a tecnologia JPA (Java Persistence API) para mapeamento objeto-relacional em conjunto com o Java Spring!</p>'+
+                                                            '<a href="tela-curso.html" class="btn botao-cor-especial button-card">Assistir aula</a>'+
+                                                            '</div>'+
+                                                            '</article>'+
+                                                            '</div>'+
+
+                                                
+
+                                                  
+
+                                                            '</div>'+
+
+                                                
+
+                                                  
+                                                            '</div>'+
+                                          
+                                                            '</div>'+
+                                            
+                                                            ' </div>'+
+
+
+                                                            '  </div>'+
+
+
+                                                            ' <div class="col-1 text-end align-items-center">  ' + 
+                                                              '  <button class="botao-carrosel" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">'+
+                                                                ' <span class="carousel-control-next-icon" aria-hidden="true"></span>'+
+                                                                ' <span class="visually-hidden">Next</span>'+
+                                                                '</button>'+
+                                                                ' </div>'+
+                                      
+
+                                        
+                                        
+
+                                                                '  </div>'
+                                                                );
+             }).join('');   
+            })
+            .catch(function (err){
+                document.getElementById('output').innerHTML = '<div class="alert alert-danger" role="alert">'+ err.message +'</div>';
+            });
+</script>
+
+
+
+  </body>
 </html>
